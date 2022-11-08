@@ -1,14 +1,1 @@
-[
-    {
-        "data":"Dato 1",
-        "id":0
-    },
-    {
-        "data":"Dato 2",
-        "id":1
-    },
-    {
-        "data":"Dato 3",
-        "id":2
-    }
-]
+[{"data":"Dato 1","id":0},{"data":"Dato 2","id":1},{"data":"Dato 3","id":2}]

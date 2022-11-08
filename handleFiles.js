@@ -11,6 +11,7 @@ class Contenedor{
     async save(objeto){
         const file= await fs.promises.readFile(this.archivo, "utf-8", (err, data)=>{})
         const file_json= await JSON.parse(file)
+        objeto.id= file_json.length
         await file_json.push(objeto)
         const nuevoArchivo= JSON.stringify(file_json)
 
