@@ -37,9 +37,9 @@ let usuario1= new Usuario("Jeremias", "Quinteros", [
 ], ["Simon"])
 
 console.log(usuario1.getFullName().bgBlue)
-console.log(colors.bgYellow(usuario1.countMascotas()))
+console.log(colors.bgYellow(`Tiene ${usuario1.countMascotas()} Mascotas`))
 usuario1.addMascota("Ramon")
-console.log(colors.bgYellow(usuario1.countMascotas()))
+console.log(colors.bgYellow(`Tiene ${usuario1.countMascotas()} Mascotas`))
 console.log(colors.bgBrightMagenta(usuario1.getBookNames()))
 usuario1.addBook("Paul Washer", "El Evangelio para cristianos")
 console.log(colors.bgBrightMagenta(usuario1.getBookNames()))
