@@ -1,5 +1,5 @@
 const fs= require("fs")
-const { type } = require("os")
+
 
 
 class Contenedor{
@@ -33,10 +33,8 @@ class Contenedor{
     }
 
     async getAll(){
-        await this.conseguirTodo().then(res=>{
-            console.log(res)
-            return res
-        }) 
+        const data= await fs.promises.readFile(this.archivo, "utf-8") 
+        return JSON.parse(data)
          
     }
 
@@ -63,3 +61,5 @@ let archivo= new Contenedor("./Datos.json", 1)
 // archivo.getById(1)
 // archivo.deleteById(2)
 // archivo.deleteAll()
+
+module.exports={Contenedor}
