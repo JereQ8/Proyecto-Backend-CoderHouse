@@ -19,6 +19,8 @@ class Contenedor{
         console.log("Archivo editado")
     }
 
+    
+
     async getById(id){
         try{
             const file= await fs.promises.readFile(this.archivo, "utf-8", (err, data)=>{})
@@ -30,6 +32,11 @@ class Contenedor{
             throw new Error(err)
         }
     
+    }
+
+
+    async deleteAndSave(newArray){
+        await fs.promises.writeFile(this.archivo, JSON.stringify(newArray) , "utf-8");
     }
 
     async getAll(){
@@ -49,6 +56,18 @@ class Contenedor{
     async deleteAll(){
         await fs.writeFile(this.archivo, "", "utf-8", ()=>{})
     }
+
+    async giveId(){
+        const file= await fs.promises.readFile(this.archivo, "utf-8", (err, data)=>{});
+
+        const json= await JSON.parse(file);
+
+        const newArray= json.map((product, index)=>{
+            return {...product, id:index + 1}
+        })
+        await fs.promises.writeFile(this.archivo,JSON.stringify(newArray) )
+    }
+
 }
 
 let archivo= new Contenedor("./Datos.json", 1)

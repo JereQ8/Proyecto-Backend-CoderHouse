@@ -1,15 +1,1 @@
-[
-    {
-        "name": "Monitor",
-        "price": 200
-    },
-    {
-        "name": "Plato",
-        "price": 15
-    },
-    {
-        "name": "Microfono",
-        "price": 50
-    }
-]
-
+[{"name":"Microondas","price":300,"thumbnail":"https://images.samsung.com/is/image/samsung/ar_MG28F3K3TAS-BG_001_Front_silver?$L1-Thumbnail$","id":1},{"name":"Guitarra","price":140,"thumbnail":"https://d3ugyf2ht6aenh.cloudfront.net/stores/969/083/products/c104101-19c3c0867eafe494c116267192628940-640-0.png","id":2},{"name":"Microfono","price":50,"thumbnail":"https://d3ugyf2ht6aenh.cloudfront.net/stores/176/090/products/pro_31_0111-a8f98f49b9a6278f5416547783668113-1024-1024.png","id":3}]
