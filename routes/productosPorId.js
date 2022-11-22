@@ -12,7 +12,7 @@ router.get("/api/productos/:id", async (req, res)=>{
         res.json(productFound)
     }
     else{
-        res.sendStatus(404)
+        res.status(404).send({error:"Product not found"})
     } 
     
 })
